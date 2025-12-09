@@ -16,7 +16,7 @@ This challenge evaluates your ability to:
 
 ### Part A: The Backend (.NET)
 
-Create a .NET Web API (Core 6, 7, or 8) that adheres to the following:
+Create a .NET 9 Web API that adheres to the following:
 
 **1. Data Model**
 

@@ -27,7 +27,7 @@ git clone https://github.com/useHireUp/Riva-FrontEnd.git
 ### Prerequisites
 
 Before you begin, make sure you have:
-- [.NET 8 SDK](https://dotnet.microsoft.com/download) (or .NET 6/7) installed
+- [.NET 9 SDK](https://dotnet.microsoft.com/download) installed
 - A modern web browser
 - A code editor (VS Code, Visual Studio, or your preferred IDE)
 - A simple HTTP server (or VS Code Live Server extension)

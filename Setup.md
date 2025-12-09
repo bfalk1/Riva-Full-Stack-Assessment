@@ -18,7 +18,7 @@ This is a starter template for the Smart Inbox Engine technical challenge. The p
 
 ## Prerequisites
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download) (or .NET 6/7)
+- [.NET 9 SDK](https://dotnet.microsoft.com/download)
 - A modern web browser
 - A simple HTTP server (or use VS Code Live Server extension)
 
@@ -52,28 +52,19 @@ You have several options to run the frontend:
 3. Select "Open with Live Server"
 4. The page will open at `http://127.0.0.1:5500` (or similar)
 
-**Option B: Using Python HTTP Server**
+**Using Python HTTP Server**
 ```bash
 cd client
 python3 -m http.server 3000
 # Then open http://localhost:3000 in your browser
 ```
 
-**Option C: Using Node.js http-server**
-```bash
-npx http-server client -p 3000
-# Then open http://localhost:3000 in your browser
-```
 
 ### 3. Testing the Application
 
 1. Make sure both the backend and frontend are running
 2. Open the frontend in your browser
-3. Click the "Load & Sort Emails" button
-4. You should see the emails sorted by priority score with color coding:
-   - **Red background**: High priority (score > 70)
-   - **Green background**: Low priority (score < 30)
-   - **White background**: Medium priority (30-70)
+3. You Should see Smart Inbox
 
 ## API Endpoint
 
@@ -106,14 +97,6 @@ npx http-server client -p 3000
 ]
 ```
 
-## Scoring Rules
-
-- **VIP Status**: +50 points if `IsVIP` is true
-- **Urgency Keywords**: +30 points if Subject contains "Urgent", "ASAP", or "Error" (case-insensitive)
-- **Time Decay**: +1 point for every hour passed since `ReceivedAt`
-- **Spam Filter**: -20 points if Body contains "Unsubscribe" or "Newsletter"
-- **Clamping**: Final score is clamped between 0 and 100
-
 ## Troubleshooting
 
 ### CORS Errors
@@ -129,7 +112,7 @@ If your frontend runs on a different port, update the CORS configuration in `ser
 
 ### Backend Not Starting
 
-- Ensure you have .NET 8 SDK installed: `dotnet --version`
+- Ensure you have .NET 9 SDK installed: `dotnet --version`
 - Try cleaning and rebuilding: `dotnet clean && dotnet build`
 
 ### Frontend Can't Connect
@@ -147,14 +130,17 @@ cd server/Tests
 dotnet test
 ```
 
-**Important:** The test file `PriorityScoringServiceTests.cs` contains placeholder tests that need to be implemented. See `ASSESSMENT_GUIDE.md` for detailed instructions on implementing the tests.
+**Important:** The test file `PriorityScoringServiceTests.cs` contains placeholder tests that need to be implemented. See `ASSESSMENT_GUIDE.md` for detailed instructions on implementing the tests. If they all fail because you have just started, tha tis because you need to impliment the tests, and additional funcitonality. 
 
 ## Next Steps
 
 This starter code provides a working foundation. You can now:
 - Review the code structure
-- Test the functionality
+- Add the logic for email priority
+- Build the API to send emails to front end
+- Create the Front End Email list, with sorted emails
 - **Implement the unit tests** (required for submission)
-- Make improvements or modifications as needed
 
-Good luck! 🚀
+Good Luck
+
+
